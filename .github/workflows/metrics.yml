@@ -9,9 +9,7 @@ on:
   workflow_dispatch:
 
   # Trigger the workflow on pushes to the main branch
-  push:
-    branches:
-      - main
+  push: {branches: ["master", "main"]}
 
 jobs:
   github-metrics:
@@ -20,7 +18,7 @@ jobs:
 
     # Define minimal required permissions for security
     permissions:
-      contents: read
+      contents: write
       issues: read
       pull-requests: read
       # Add other permissions if required by specific plugins
@@ -56,14 +54,3 @@ jobs:
           plugin_languages_recent_load: 300
           plugin_languages_sections: most-used
           plugin_languages_threshold: 0%
-        env:
-          GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
-
-      - name: Commit and Push Metrics
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: "📈 Update GitHub metrics [skip ci]"
-          branch: metrics  # Specify the branch where metrics are stored
-          file_pattern: './metrics/**'  # Adjust the path based on where metrics are generated
-        env:
-          GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
