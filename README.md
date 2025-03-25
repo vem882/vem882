@@ -32,9 +32,9 @@
         
   <h3>🧑‍💻 About Me</h3>
         <p>
-            I work as a B2B Customer Integration Specialist at Finland's most popular online store Verkkokauppa.com  
-            I'm also studying at Oulu University of Applied Sciences in the Degree Programme in Information Technology, specializing in Software Development.
-            I have a passion for coding, and in my free time, I enjoy working on IoT projects and automating smart home devices.
+            I work as a B2B Customer Integration Specialist at Finland's most popular online store Verkkokauppa.com  </p>
+           <p> I'm also studying at Oulu University of Applied Sciences in the Degree Programme in Information Technology, specializing in Software Development.</p>
+           <p> I have a passion for coding, and in my free time, I enjoy working on IoT projects and automating smart home devices.</p>
         </p>
     </div>
 </div>
