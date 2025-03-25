@@ -31,12 +31,6 @@ jobs:
         with:
           fetch-depth: 1  # Fetch only the latest commit for faster performance
 
-      - name: Fix Docker installation conflicts
-        run: |
-          sudo apt-get remove -y containerd docker.io containerd.io
-          sudo apt-get update
-          sudo apt-get install -y docker.io jq
-
       - name: Generate GitHub Metrics
         uses: lowlighter/metrics@latest  # Updated to the correct version
         with:
@@ -44,6 +38,7 @@ jobs:
           user: vem882
           template: classic
           base: header, activity, community, repositories, metadata
+          base_hireable: true
           base_indepth: true
           config_octicon: true
           config_timezone: Europe/Helsinki
