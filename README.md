@@ -38,3 +38,5 @@
         </p>
     </div>
 </div>
+
+![GitHub Snake](https://raw.githubusercontent.com/vem882/vem882/refs/heads/output/github-snake-dark.svg)
